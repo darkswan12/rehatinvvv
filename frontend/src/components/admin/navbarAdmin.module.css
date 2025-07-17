@@ -1,0 +1,169 @@
+@import "../../vars.css";
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1.3rem 7%;
+  background-color: var(--color-Fifth);
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLogo img {
+  width: 11rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  font-size: 1.1rem;
+  margin-right: 1.3rem;
+  color: var(--color-bg);
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 0 0.4rem;
+}
+
+.navbarNav {
+  display: flex;
+}
+
+.nav::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid var(--color-bg);
+  transform: scaleX(0);
+  transition: 0.1s linear;
+}
+
+.nav:hover::after {
+  transform: scaleX(1.17);
+}
+
+.login {
+  padding: 0.5rem 2rem;
+  background-color: var(--color-hover);
+  border-radius: 5px;
+  font-weight: 600;
+  margin-left: 20px;
+  border: transparent;
+  color: var(--color-bg);
+}
+
+.active {
+  border-bottom: 0.18rem solid var(--color-bg);
+}
+
+.login:hover {
+  background-color: var(--color-bg);
+  color: var(--color-hover);
+}
+
+.logout {
+  font-weight: bold;
+  padding: 3px 0;
+  padding-left: 15px;
+  padding-right: 38px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.hamburgerMenu {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.userName {
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  padding-right: 0.2rem;
+}
+
+.userPhoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid #c4c4c4;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburgerMenu {
+    display: inline-block;
+  }
+
+  .navbarNav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+    text-align: left;
+    border-left: 1px solid #000;
+  }
+
+  .navbarNav.active {
+    right: 0;
+  }
+
+  .navbarLogo img {
+    width: 9rem;
+  }
+
+  .nav {
+    color: #000000;
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .nav::after {
+    border-bottom: 0.1rem solid var(--color-Fifth);
+    transform-origin: 0 0;
+  }
+
+  .nav:hover {
+    color: var(--color-Fifth);
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .userPhoto {
+    width: 40px;
+    height: 40px;
+  }
+
+  .userName {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0;
+  }
+
+  .login {
+    padding: 0.5rem 1.5rem;
+    margin-left: 0;
+    font-size: 0.8rem;
+  }
+
+  .hamburgerMenu {
+    font-size: 1.5rem;
+  }
+}

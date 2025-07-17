@@ -1,0 +1,114 @@
+@import "../../vars.css";
+
+.wishlist {
+  padding: 10rem 3rem;
+}
+
+.wishlist h1 {
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.wishlist .wishlistPlaces-list {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  gap: 20px;
+  overflow: auto;
+  height: 150vh;
+  background-color: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.wishlist .wishlistPlace-card {
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.wishlist .wishlistPlace_gambar {
+  position: relative;
+  width: 430px;
+  height: 268px;
+}
+
+.wishlist .wishlistPlace_gambar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.wishlistPlace_love {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 2rem;
+}
+
+.wishlistPlacelove-icon {
+  color: gray;
+  cursor: pointer;
+}
+
+.wishlistPlacelove-icon.loved {
+  color: red;
+}
+
+.wishlistPlace_keterangan h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.wishlistPlace_keterangan p {
+  font-size: 15px;
+}
+
+.link_tempat {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+}
+
+.wishlistPlace_keterangan {
+  width: 65%;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  text-align: justify;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.wishlistPlace_harga {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid #ccc;
+  padding: 2.5rem;
+}
+
+#nilai_harga {
+  color: var(--color-Fifth);
+  font-weight: bold;
+}
+
+.wishlistPlace_rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: gold;
+}
+
+#nilai_rating {
+  color: #000;
+  font-weight: bold;
+}
+
+.wishlistPlace_deskripsi {
+  color: var(--color-text);
+}
